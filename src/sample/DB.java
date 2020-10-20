@@ -80,7 +80,6 @@ public class DB {
                 System.err.println("statement пустой!");
             }
 
-
             if (connection != null) {
                 connection.close();
                 connection = null;
