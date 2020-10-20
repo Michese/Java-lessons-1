@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<VBox alignment="CENTER" prefHeight="482.0" prefWidth="752.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller">
+   <children>
+      <HBox alignment="CENTER" prefHeight="72.0" prefWidth="532.0" spacing="20.0">
+         <children>
+            <VBox alignment="CENTER" prefHeight="72.0" prefWidth="171.0" spacing="5.0">
+               <children>
+                  <TextField fx:id="textLogin" promptText="Логин" />
+                  <TextField fx:id="textPassword" promptText="Пароль" />
+               </children>
+            </VBox>
+            <Button mnemonicParsing="false" onAction="#clickLogIn" text="Войти" />
+            <Button mnemonicParsing="false" onAction="#clickLogOut" text="Выйти" />
+            <Label fx:id="textWelcome">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Label>
+         </children>
+      </HBox>
+      <ScrollPane prefHeight="406.0" prefWidth="716.0">
+        <content>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="401.0" prefWidth="749.0">
+               <children>
+                  <TableView fx:id="tableView" layoutX="10.0" layoutY="7.0" prefHeight="375.0" prefWidth="735.0">
+                    <columns>
+                      <TableColumn fx:id="idDoctorColumn" prefWidth="54.0" text="N" />
+                      <TableColumn fx:id="nameDoctorColumn" prefWidth="224.0" text="Врач" />
+                        <TableColumn fx:id="namePatientColumn" prefWidth="259.0" text="Пациент" />
+                        <TableColumn fx:id="analyzesPatientColumn" prefWidth="178.0" text="Анализы" />
+                    </columns>
+                  </TableView>
+               </children>
+            </AnchorPane>
+        </content>
+      </ScrollPane>
+   </children>
+</VBox>
